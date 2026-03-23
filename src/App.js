@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import React from "react";
 import { ApolloClient, InMemoryCache, ApolloProvider }  from "@apollo/client";
 
@@ -27,6 +27,7 @@ const App = () => {
           <Route exact path ="/" element={<Homepage/>}/>
           <Route path ="/:slug" element={<Page/>}/>
           <Route path="/uutiset/:slug" element={<Article/>}/>
+          <Route path="/sup-frontend" element={<Navigate to="/" replace />} />
           <Route path ="*" element={<NotFound/>}/>
           
       </Routes>
