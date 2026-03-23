@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/sup-frontend/static/css/main.24afd111.css",
+    "main.js": "/sup-frontend/static/js/main.2d565bbf.js",
+    "static/media/Mulish-BoldItalic.ttf": "/sup-frontend/static/media/Mulish-BoldItalic.d98f5d219adbc963e431.ttf",
+    "static/media/Mulish-LightItalic.ttf": "/sup-frontend/static/media/Mulish-LightItalic.34ac7cad2ab4b608dc66.ttf",
+    "static/media/Mulish-Italic.ttf": "/sup-frontend/static/media/Mulish-Italic.5ae716ba8a7593a27d33.ttf",
+    "static/media/Mulish-ExtraLightItalic.ttf": "/sup-frontend/static/media/Mulish-ExtraLightItalic.d935ac1f8f1911957a7b.ttf",
+    "static/media/Mulish-Bold.ttf": "/sup-frontend/static/media/Mulish-Bold.6cb68186a91bb3fcb0b7.ttf",
+    "static/media/Mulish-Light.ttf": "/sup-frontend/static/media/Mulish-Light.2b8fbb0e33f960080fd2.ttf",
+    "static/media/Mulish-Regular.ttf": "/sup-frontend/static/media/Mulish-Regular.d3d302e1573fb1c8db5b.ttf",
+    "static/media/Mulish-ExtraLight.ttf": "/sup-frontend/static/media/Mulish-ExtraLight.588a2961a8a2682d569b.ttf",
+    "static/media/logo_vertical.png": "/sup-frontend/static/media/logo_vertical.9971d92b0d9ddc3b3a67.png",
+    "index.html": "/sup-frontend/index.html",
+    "main.24afd111.css.map": "/sup-frontend/static/css/main.24afd111.css.map",
+    "main.2d565bbf.js.map": "/sup-frontend/static/js/main.2d565bbf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24afd111.css",
+    "static/js/main.2d565bbf.js"
+  ]
+}
