@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import React from "react";
+import { ApolloClient, InMemoryCache, ApolloProvider }  from "@apollo/client";
 
-function App() {
+
+
+import SiteHeader from './components/SiteHeader';
+import Footer from './components/Footer';
+import Homepage from './pages/Homepage';
+import Page from './pages/Page';
+import Article from './pages/Article';
+import NotFound from './pages/NotFound';
+import { backendUrl } from './helpers';
+
+//apollo client
+const client = new ApolloClient({
+  uri: backendUrl+'/graphql',
+  cache:  new InMemoryCache()
+});
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <ApolloProvider client={client}>
+      <div className="app">
+      <SiteHeader />
+      <Routes>
+          <Route exact path ="/" element={<Homepage/>}/>
+          <Route path ="/:slug" element={<Page/>}/>
+          <Route path="/uutiset/:slug" element={<Article/>}/>
+          <Route path ="*" element={<NotFound/>}/>
+          
+      </Routes>
 
+      <Footer/>
+
+    </div>
+
+    </ApolloProvider>
+    
+    
+  );
+  
+}
+  
+
+      
 export default App;
