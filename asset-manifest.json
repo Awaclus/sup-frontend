@@ -1,22 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.68d8d82c.css",
-    "main.js": "/static/js/main.8dcee2ec.js",
-    "static/media/Mulish-BoldItalic.ttf": "/static/media/Mulish-BoldItalic.d98f5d219adbc963e431.ttf",
-    "static/media/Mulish-LightItalic.ttf": "/static/media/Mulish-LightItalic.34ac7cad2ab4b608dc66.ttf",
-    "static/media/Mulish-Italic.ttf": "/static/media/Mulish-Italic.5ae716ba8a7593a27d33.ttf",
-    "static/media/Mulish-ExtraLightItalic.ttf": "/static/media/Mulish-ExtraLightItalic.d935ac1f8f1911957a7b.ttf",
-    "static/media/Mulish-Bold.ttf": "/static/media/Mulish-Bold.6cb68186a91bb3fcb0b7.ttf",
-    "static/media/Mulish-Light.ttf": "/static/media/Mulish-Light.2b8fbb0e33f960080fd2.ttf",
-    "static/media/Mulish-Regular.ttf": "/static/media/Mulish-Regular.d3d302e1573fb1c8db5b.ttf",
-    "static/media/Mulish-ExtraLight.ttf": "/static/media/Mulish-ExtraLight.588a2961a8a2682d569b.ttf",
+    "main.css": "/static/css/main.78ddaf8b.css",
+    "main.js": "/static/js/main.46355b42.js",
     "static/media/logo_vertical.png": "/static/media/logo_vertical.9971d92b0d9ddc3b3a67.png",
     "index.html": "/index.html",
-    "main.68d8d82c.css.map": "/static/css/main.68d8d82c.css.map",
-    "main.8dcee2ec.js.map": "/static/js/main.8dcee2ec.js.map"
+    "main.78ddaf8b.css.map": "/static/css/main.78ddaf8b.css.map",
+    "main.46355b42.js.map": "/static/js/main.46355b42.js.map"
   },
   "entrypoints": [
-    "static/css/main.68d8d82c.css",
-    "static/js/main.8dcee2ec.js"
+    "static/css/main.78ddaf8b.css",
+    "static/js/main.46355b42.js"
   ]
 }
