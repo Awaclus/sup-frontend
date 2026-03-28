@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useQuery, gql } from '@apollo/client';
 import ReactMarkdown from "react-markdown";
 import { backendUrl } from '../helpers';
+import remarkGfm from 'remark-gfm';
 
 
 import NotFound from './NotFound';
@@ -72,7 +73,7 @@ export default function Page() {
             <div className="page-content">
                     <h1 key="1" className='page-title' style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url(${otsikkoKuvaUrl})`}}>{data.sivut[0].Otsikko}</h1>
                     <div className='page-body'>
-                        {data.sivut[0].Tekstiosa != null && <ReactMarkdown className="richtext" components={{h1: HeadingRenderer, h2: HeadingRenderer, h3: HeadingRenderer, h4: HeadingRenderer, h5: HeadingRenderer, h6: HeadingRenderer}}>{data.sivut[0].Tekstiosa}</ReactMarkdown>}
+                        {data.sivut[0].Tekstiosa != null && <ReactMarkdown remarkPlugins={[remarkGfm]} className="richtext" components={{h1: HeadingRenderer, h2: HeadingRenderer, h3: HeadingRenderer, h4: HeadingRenderer, h5: HeadingRenderer, h6: HeadingRenderer}}>{data.sivut[0].Tekstiosa}</ReactMarkdown>}
                         {features}
                     </div>
                     

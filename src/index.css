@@ -184,12 +184,10 @@ body {
 @media (min-width: 900px) {
   .page-body {
     width: 45vw;
-  }
-
-  .edit-profile {
-    width: 45vw;
+    min-width: 800px;
   }
 }
+
 
 .site-header {
   background-color: var(--sup-bg);
@@ -697,4 +695,48 @@ code {
   position: absolute;
   top: 70vh;
   width: 100%;
+}
+
+.page-body table {
+  width: 100%;
+}
+
+.page-body td, .page-body th {
+  text-align: left;
+}
+
+@media (max-width: 800px) {
+  .page-body table, 
+  .page-body thead, 
+  .page-body tbody, 
+  .page-body th, 
+  .page-body td, 
+  .page.body tr { 
+    display: block; 
+  }
+
+  .page-body thead tr { 
+    display: none;
+  }
+
+  .page-body tr { 
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .page-body td { 
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  .page-body td:last-child {
+    border-bottom: 0;
+  }
 }
