@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.835ee54e.css",
-    "main.js": "/static/js/main.a547268b.js",
+    "main.css": "/static/css/main.68d8d82c.css",
+    "main.js": "/static/js/main.8dcee2ec.js",
     "static/media/Mulish-BoldItalic.ttf": "/static/media/Mulish-BoldItalic.d98f5d219adbc963e431.ttf",
     "static/media/Mulish-LightItalic.ttf": "/static/media/Mulish-LightItalic.34ac7cad2ab4b608dc66.ttf",
     "static/media/Mulish-Italic.ttf": "/static/media/Mulish-Italic.5ae716ba8a7593a27d33.ttf",
@@ -12,11 +12,11 @@
     "static/media/Mulish-ExtraLight.ttf": "/static/media/Mulish-ExtraLight.588a2961a8a2682d569b.ttf",
     "static/media/logo_vertical.png": "/static/media/logo_vertical.9971d92b0d9ddc3b3a67.png",
     "index.html": "/index.html",
-    "main.835ee54e.css.map": "/static/css/main.835ee54e.css.map",
-    "main.a547268b.js.map": "/static/js/main.a547268b.js.map"
+    "main.68d8d82c.css.map": "/static/css/main.68d8d82c.css.map",
+    "main.8dcee2ec.js.map": "/static/js/main.8dcee2ec.js.map"
   },
   "entrypoints": [
-    "static/css/main.835ee54e.css",
-    "static/js/main.a547268b.js"
+    "static/css/main.68d8d82c.css",
+    "static/js/main.8dcee2ec.js"
   ]
 }
