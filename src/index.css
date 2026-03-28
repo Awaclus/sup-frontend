@@ -7,7 +7,8 @@
   --sup-highlight-darker: #02c28a;
   --sup-bg-lighter: #313ab1;
   --sup-shadow: #210f53e6;
-  --sup-alt-white: #e8eaff;
+  --sup-shadow-transparent: #210f5330;
+  --sup-alt-white: aliceblue;
 }
 
 img {
@@ -102,6 +103,17 @@ body {
   width: 90vw;
   margin: auto;
   font-size: 18px;
+  background-color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 0px 0px 40px var(--sup-shadow-transparent);
+}
+
+.page-body img {
+  max-height: 70vh;
+  box-shadow: 3px 3px 10px var(--sup-shadow-transparent);
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .page-body::selection {
@@ -315,6 +327,7 @@ code {
 
 .page-content {
   min-height: calc(100vh - 320px);
+  background-color: aliceblue;
 }
 
 .page-content::selection {
@@ -487,7 +500,8 @@ code {
 }
 
 .articles-list {
-  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 80px;
 }
 
 .articles-list-date {
@@ -531,6 +545,7 @@ code {
   font-weight: 300;
   background-size: cover;
   background-attachment: fixed;
+  margin-bottom: 0px;
 }
 
 .article-link-large {
@@ -577,10 +592,13 @@ code {
 }
 
 .articles-list-short {
-  background: var(--sup-alt-white);
   padding-top: 60px;
   padding-bottom: 60px;
+}
 
+.articles-list-short .page-body {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 @media (min-width: 900px) {
