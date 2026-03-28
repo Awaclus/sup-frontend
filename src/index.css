@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=IBM+Plex+Sans:ital,wdth,wght@0,75..100,100..700;1,75..100,100..700&display=swap');
 
 :root {
   --sup-bg: #242a83;
@@ -9,80 +9,26 @@
   --sup-shadow: #210f53e6;
   --sup-shadow-transparent: #210f5330;
   --sup-alt-white: aliceblue;
-}
+
+ }
 
 img {
   width: auto;
   max-width: 100%;
 }
 
-@font-face {
-  font-family: Mulish;
-  src: url(./assets/Mulish-LightItalic.ttf);
-  font-style: italic;
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: Mulish;
-  src: url(./assets/Mulish-ExtraLightItalic.ttf);
-  font-style: italic;
-  font-weight: 100;
-}
-
-@font-face {
-  font-family: Mulish;
-  src: url(./assets/Mulish-BoldItalic.ttf);
-  font-style: italic;
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: Mulish;
-  src: url(./assets/Mulish-Italic.ttf);
-  font-style: italic;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: Mulish;
-  src: url(./assets/Mulish-ExtraLight.ttf);
-  font-style: normal;
-  font-weight: 100;
-}
-
-@font-face {
-  font-family: Mulish;
-  src: url(./assets/Mulish-Bold.ttf);
-  font-style: normal;
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: Mulish;
-  src: url(./assets/Mulish-Light.ttf);
-  font-style: normal;
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: Mulish;
-  src: url(./assets/Mulish-Regular.ttf);
-  font-style: normal;
-  font-weight: 400;
-}
-
-
-
-
 
 body {
   margin: 0;
-  font-family: 'Bricolage Grotesque', 'Roboto', 'Oxygen',
+  font-family: 'IBM Plex Sans', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Bricolage Grotesque';
 }
 
 .page-title {
@@ -97,16 +43,19 @@ body {
   margin: 0;
   background-size: cover;
   position: relative;
+  background-position: center;
 }
 
 .page-body {
   width: 90vw;
   margin: auto;
-  font-size: 18px;
+  font-size: 19px;
   background-color: white;
   padding-left: 30px;
   padding-right: 30px;
   box-shadow: 0px 0px 40px var(--sup-shadow-transparent);
+  font-variation-settings: "wdth" 92 !important;
+  font-weight: 300;
 }
 
 .page-body img {
@@ -167,13 +116,14 @@ body {
   margin-top: 30px;
   display: flex;
   border-radius: 4px;
-  transition: all 300ms;
+  transition: all 500ms ease;
 }
 
 .buttonlink:hover {
   background-color: var(--sup-highlight);
   cursor: pointer;
   text-shadow: 1px 1px 5px var(--sup-shadow);
+  transition: all 0s;
   
 }
 
@@ -217,11 +167,12 @@ body {
 .site-header a {
   color: inherit;
   text-decoration: inherit;
-  transition: all 300ms;
+  transition: all 500ms;
 }
 
 .site-header .categories a:hover {
   text-shadow: 1px 1px 5px var(--sup-highlight), 1px 1px 15px var(--sup-highlight);
+  transition: all 0s;
 }
 
 .site-header .categories {
@@ -350,11 +301,12 @@ code {
   color: white;
   text-decoration: inherit;
   font-weight: 700;
-  transition: all 300ms;
+  transition: all 500ms;
 }
 
 .footer a:hover {
   text-shadow: 1px 1px 5px var(--sup-highlight), 1px 1px 15px var(--sup-highlight);
+  transition: all 0s;
 }
 
 
@@ -380,7 +332,12 @@ code {
 }
 
 .page-content a {
-  color: var(--sup-bg);
+  color: var(--sup-bg-lighter);
+  text-decoration: underline;
+}
+
+.page-content a:visited {
+  color: var(--sup-bg-lighter);
   text-decoration: inherit;
 }
 
@@ -535,7 +492,7 @@ code {
   margin-top: 0 !important;
   margin-left: 0 !important;
   width: 100%;
-  height: 70vh;
+  height: 50vh;
   background-color: var(--sup-bg-lighter);
   color: white;
   text-shadow: 2px 2px 10px var(--sup-shadow);
@@ -623,6 +580,8 @@ code {
  width: 320px;
  right: 0px;
  position: absolute;
+ z-index: 10;
+ display: none;
 }
 
 .mobile-menu a {
@@ -631,6 +590,7 @@ code {
   padding-right: 50px;
   text-decoration: none;
   text-align: right;
+  color: white;
 }
 
 .mobile-menu a:hover {
@@ -655,6 +615,10 @@ code {
   .categories {
     display: none !important;
   }
+
+  .mobile-menu {
+    display: block;
+  }
 }
 
 .frontpage-button {
@@ -668,12 +632,15 @@ code {
   margin: 20px;
   border-radius: 8px;
   text-decoration: none;
+  transition: all 500ms ease;
 }
 
 .frontpage-button:hover {
   background-color: var(--sup-highlight-darker);
   cursor: pointer;
   text-shadow: 1px 1px 5px var(--sup-shadow);
+  transition: all 0s;
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.35);
 }
 
 .frontpage-button-container {
@@ -739,4 +706,17 @@ code {
   .page-body td:last-child {
     border-bottom: 0;
   }
+}
+
+.notfound-body {
+  padding-top: 10vh;
+}
+
+.notfound-body .page-body {
+  padding-top: 1px;
+  padding-bottom: 20px;
+}
+
+strong {
+  font-weight: 800;
 }

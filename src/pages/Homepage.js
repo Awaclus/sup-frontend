@@ -95,11 +95,13 @@ export default function Homepage() {
       <div className="articles-list-short">
         <div className="page-body">
           <h4>Viimeisimmät uutiset</h4>
+          <p></p>
       {articlesData.uutiset.map(art => (
           <Link to={`/uutiset/${art.Osoite}#top`} className="article-link floating" key={art.documentId}>
               <span className="articles-list-date">{new Date(Date.parse(art.createdAt)).toLocaleString('fi-FI', {year: 'numeric', month: 'numeric', day: 'numeric'})}</span><span className="articles-list-title">{art.Otsikko}</span>
           </Link>
       ))}
+      <p></p>
       <Link to="/uutiset#top" className="article-link floating">Lisää uutisia</Link>
       </div></div>
     </div></>
