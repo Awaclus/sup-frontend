@@ -39,7 +39,7 @@ export default function Homepage() {
   const { loading, error, data } = useQuery(HOMEDATA);
   const { loading: articlesLoading, error: articlesError, data: articlesData } = useQuery(ARTICLES);
 
-  if (loading || articlesLoading) return <p>Ladataan...</p>
+  if (loading || articlesLoading) return <p class="spinner"></p>
 
   console.log(data);
 

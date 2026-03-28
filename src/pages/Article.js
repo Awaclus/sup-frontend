@@ -34,7 +34,7 @@ export default function Article() {
 
     const { loading: articlesLoading, error: articlesError, data: articlesData } = useQuery(ARTICLES);
 
-    if (loading || articlesLoading) return <div className='page-content'><p>Ladataan sisältöä...</p></div>
+    if (loading || articlesLoading) return <div className='page-content'><p class="spinner"></p></div>
 
     if (data.uutiset.toString() === "") {
         return <NotFound/>
@@ -63,7 +63,7 @@ export default function Article() {
                                 </Link>
                             ))}</div>*/}
                             <h1 className="article-title">{article.Otsikko}</h1>
-                            <h6 className="article-date">{new Date(Date.parse(article.createdAt)).toLocaleString('fi-FI', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}</h6>
+                            <p className="article-date">{new Date(Date.parse(article.createdAt)).toLocaleString('fi-FI', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}</p>
                             <ReactMarkdown className="richtext">{article.Tekstiosa}</ReactMarkdown>
                         </div></>
                     }
