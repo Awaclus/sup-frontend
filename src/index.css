@@ -44,6 +44,7 @@ h1, h2, h3, h4 {
   background-size: cover;
   position: relative;
   background-position: center;
+  overflow-wrap: break-word;
 }
 
 
@@ -58,6 +59,7 @@ h1, h2, h3, h4 {
   font-variation-settings: "wdth" 92 !important;
   font-weight: 300;
   box-sizing: border-box;
+  overflow-wrap: break-word;
 }
 
 .page-body img {
