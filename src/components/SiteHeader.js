@@ -21,7 +21,7 @@ export default function SiteHeader() {
     const { loading, error, data } = useQuery(CATEGORIES);
     const [open, setOpen] = useState(false);
 
-    if (loading) return <p class="spinner"></p>
+    if (loading) return <p className="spinner"></p>
 
 
 

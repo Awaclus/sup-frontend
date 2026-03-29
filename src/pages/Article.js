@@ -34,7 +34,7 @@ export default function Article() {
 
     const { loading: articlesLoading, error: articlesError, data: articlesData } = useQuery(ARTICLES);
 
-    if (loading || articlesLoading) return <div className='page-content'><p class="spinner"></p></div>
+    if (loading || articlesLoading) return <div className='page-content'><p className="spinner"></p></div>
 
     if (data.uutiset.toString() === "") {
         return <NotFound/>

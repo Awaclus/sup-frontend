@@ -33,7 +33,7 @@ export default function Page() {
         variables: { slug : slug }
     });
 
-    if (loading) return <div className='page-body'><p class="spinner"></p></div>
+    if (loading) return <div className='page-body'><p className="spinner"></p></div>
 
     if (data.sivut.toString() === "") {
         return <NotFound/>

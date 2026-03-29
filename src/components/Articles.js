@@ -21,7 +21,7 @@ const Articles = () => {
 
     const { loading, error, data } = useQuery(ARTICLES);
 
-    if (loading) return <p class="spinner"></p>
+    if (loading) return <p className="spinner"></p>
 
     const truncateText = (text, length) => {
         if (text.length <= length) {
