@@ -1,5 +1,5 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useLocation, useParams } from 'react-router-dom';
 import { useQuery, gql } from '@apollo/client';
 import ReactMarkdown from "react-markdown";
 import { backendUrl } from '../helpers';
@@ -29,9 +29,23 @@ const PAGE = gql`
 
 export default function Page() {
     const { slug } = useParams();
+    const { hash } = useLocation();
     const { loading, error, data } = useQuery(PAGE, {
         variables: { slug : slug }
     });
+    useEffect(() => {
+        if (!loading && hash) {
+            const id = hash.replace('#', '');
+            const element = document.getElementById(id);
+
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        }
+    }, [loading, hash, data]);
+
 
     if (loading) return <div className='page-body'><p className="spinner"></p></div>
 
