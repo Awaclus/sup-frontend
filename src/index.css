@@ -774,3 +774,8 @@ strong {
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+img[title="Venepaikkakartta"] {
+  max-height: unset;
+  max-width: 60%;
+}
