@@ -777,5 +777,10 @@ strong {
 
 img[title="Venepaikkakartta"] {
   max-height: unset;
-  max-width: 60%;
+}
+
+@media (min-width: 900px) {
+  .page-body img[title="Venepaikkakartta"] {
+      max-width: 60%;
+  }
 }
