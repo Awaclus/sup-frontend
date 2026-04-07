@@ -4,6 +4,7 @@ import { useQuery, gql } from '@apollo/client';
 import ReactMarkdown from "react-markdown";
 import NotFound from './NotFound';
 import { HashLink as Link } from 'react-router-hash-link';
+import remarkGfm from 'remark-gfm';
 
 const ARTICLE = gql`
     query GetArticle($slug: String!) {
@@ -64,7 +65,7 @@ export default function Article() {
                             ))}</div>*/}
                             <h1 className="article-title">{article.Otsikko}</h1>
                             <p className="article-date">{new Date(Date.parse(article.createdAt)).toLocaleString('fi-FI', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}</p>
-                            <ReactMarkdown className="richtext">{article.Tekstiosa}</ReactMarkdown>
+                            <ReactMarkdown className="richtext" remarkPlugins={[remarkGfm]}>{article.Tekstiosa}</ReactMarkdown>
                         </div></>
                     }
                     
