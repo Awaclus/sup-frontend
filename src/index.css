@@ -560,6 +560,12 @@ code {
 
 .article-preview {
   font-size: 14px;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .article-preview p {
@@ -783,4 +789,8 @@ img[title="Venepaikkakartta"] {
   .page-body img[title="Venepaikkakartta"] {
       max-width: 60%;
   }
+}
+
+.articlebody {
+  padding-top: 5px !important;
 }

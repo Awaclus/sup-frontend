@@ -2,6 +2,7 @@ import React from "react"
 import { HashLink as Link } from 'react-router-hash-link';
 import { useQuery, gql } from '@apollo/client';
 import ReactMarkdown from "react-markdown";
+import remarkGfm from 'remark-gfm';
 
 
 const ARTICLES = gql`
@@ -28,7 +29,19 @@ const Articles = () => {
             return text;
         }
 
-        return text.substring(0, length) + '\u2026';
+        return removeMarkdown(text).substring(0, length) + '\u2026';
+    };
+
+    const removeMarkdown = (markdown) => {
+    return markdown
+        .replace(/\|[\s\-\|:]{3,}\|/g, '|') // Remove table separators
+        .replace(/\|\s*\|/g, '|') // Remove empty cells/double pipes
+        .replace(/\|+/g, ' | ')   // Ensure single pipes have a space
+        .replace(/[#*`_~]/g, '') // Remove header/bold/italic markers
+        .replace(/!\[(.*?)\]\(.*?\)/g, '$1')// Remove image syntax but keep alt text: ![alt](url) -> alt
+        .replace(/\[(.*?)\]\(.*?\)/g, '$1') // Remove link syntax but keep text: [text](url) -> text
+        .replace(/\s+/g, ' ') // Replace multiple newlines/spaces with a single space
+        .trim();
     };
 
     try {
@@ -41,7 +54,7 @@ const Articles = () => {
                         <br></br>
                         <div className="articles-list-date-small">{new Date(Date.parse(article.createdAt)).toLocaleString('fi-FI', {year: 'numeric', month: 'numeric', day: 'numeric'})}</div>
                         <div className="article-preview">
-                            {article.Tekstiosa && <ReactMarkdown>{truncateText(article.Tekstiosa, 280)}</ReactMarkdown>}
+                            {article.Tekstiosa && <ReactMarkdown remarkPlugins={[remarkGfm]}>{truncateText(article.Tekstiosa, 280)}</ReactMarkdown>}
                         </div>
                     </div>
                 ))}

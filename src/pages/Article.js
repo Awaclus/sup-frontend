@@ -65,7 +65,7 @@ export default function Article() {
                             ))}</div>*/}
                             <h1 className="article-title">{article.Otsikko}</h1>
                             <p className="article-date">{new Date(Date.parse(article.createdAt)).toLocaleString('fi-FI', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}</p>
-                            <ReactMarkdown className="richtext" remarkPlugins={[remarkGfm]}>{article.Tekstiosa}</ReactMarkdown>
+                            <ReactMarkdown className="richtext articlebody" remarkPlugins={[remarkGfm]}>{article.Tekstiosa}</ReactMarkdown>
                         </div></>
                     }
                     
